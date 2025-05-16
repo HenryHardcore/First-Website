@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+    </style>
+  </head>
+  <body>
+    <p>Rock Paper Scissors</p>
+    <button onclick="
+    igra(`kamen`)
+    ">Rock</button>
+    <button onclick="
+    igra(`papir`)
+    ">Papar</button>
+    <button onclick="
+    igra(`makase`)
+    ">Scissors</button>
+    <button onclick="
+    localStorage.removeItem('name');
+    location.reload();
+    ">Reset</button>
+    <script>
+      let score = JSON.parse(localStorage.getItem(`name`)) || {
+          wins: 0,
+          losses: 0,
+          ties: 0
+        };
+      
+      function kompbirapotez() {
+
+        let broj = Math.random()
+
+        if (broj > 0 && broj < 1 / 3) {
+          broj = `kamen`
+        }
+        else if (broj > 1/3 && broj < 2 / 3) {
+          broj = `papir`
+        }
+        else {
+          broj = `makase`
+        }
+        return broj;
+      }
+      function igra(a) {
+        
+
+        const komp = kompbirapotez();
+        let rez = ``;
+
+        if (a === `kamen`) {
+          if (komp === `kamen`) {
+            rez = `nerijeseno`;
+          }
+          else if (komp === `papir`) {
+            rez = `izgubio si`;
+          }
+          else{
+            rez = `pobijedio si`;
+          }
+        } 
+        else if (a === `papir`) {
+          if (komp === `kamen`) {
+            rez = `pobijedio si`;
+          }
+          else if (komp === `papir`) {
+            rez = `nerijeseno`;
+          }
+          else{
+            rez = `izgubio si`;
+          }
+        }
+        else {
+          if (komp === `makase`) {
+            rez = `nerijeseno`;
+          }
+          else if (komp === `papir`) {
+            rez = `pobijedio si`;
+          }
+          else{
+            rez = `izgubio si`;
+          }
+        }
+
+        if (rez === `nerijeseno`) {
+          score.ties += 1
+        }
+        else if (rez === `pobijedio si`) {
+          score.wins += 1
+        }
+        else {
+          score.losses += 1
+        }
+
+        localStorage.setItem('name', JSON.stringify(score))
+
+        alert(`ti si izabro ${a}, komp je izabro ${komp},rezultat je ${rez}
+Wins:${score.wins},Ties:${score.ties},Losses:${score.losses}`);
+      }
+      
+    </script>
+  </body>
+</html>

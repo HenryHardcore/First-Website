@@ -1,0 +1,78 @@
+.header {
+  background-color: rgb(250, 248, 248);
+  display: flex;
+  height: 10vh;
+  border-bottom: 1px solid;
+  border-color: rgb(128, 96, 96, 0.15);
+  box-shadow: 0px 1px 0px rgb(201, 199, 199);
+
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  justify-content: space-between;
+  align-items: center;
+  
+}
+.lijeva-strana {
+  height: 100%;
+  margin-left: 0.3vw;
+  display: grid;
+  grid-template-columns: 5px 1fr;
+  width: 10vw;
+  margin-right: 0;
+}
+.logo {
+  height: 100%;
+
+}
+.v1 {
+  border-left: 0.33vw solid;
+  height: 100%;
+  border-color: rgba(137,81,41);
+  width: 0;
+}
+.text-lijevi {
+  display: block;
+  height: 100%;
+  font-family: Roboto, Arial;
+  font-size: 4.2vh;
+  width: 100%;
+}
+.gornji-text, .donji-text {
+  font-weight: 500;
+  margin-left: 10px;
+  color: rgba(137,81,41);
+  height: 50%;
+  font-size: 1em;
+  width: 100%;
+  
+}
+.naslovna, .o-nama, .usluge, .nasi-radovi, .galerija, .kontakt {
+  border: opx solid red;
+  display: flex;
+  justify-content: center;
+  width: 8vw;
+  margin-left: 50px;
+  align-items: center;
+  background-color: rgb(250, 248, 248);
+  font-family: Roboto, Arial;
+  height: 90%;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.naslovna:hover, .o-nama:hover, .usluge:hover, .nasi-radovi:hover, .galerija:hover,  
+.kontakt:hover {
+  width: 9vw;
+  background-color: rgb(218, 217, 217);
+  height: 100%;
+  box-shadow: 2px 2px 5px;
+  font-size: 1vw;
+  cursor: pointer;
+}
+img {
+  height: 100%;
+}
+

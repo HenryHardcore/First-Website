@@ -1,0 +1,25 @@
+body  {
+  margin: 0;
+  background-color: rgb(238, 237, 237);
+  height: 3267px;
+  width: 100%;
+  font-family: Roboto, Arial;
+  position: absolute;
+  overflow-x: hidden;
+}
+img {
+  height: 100%;
+  
+}
+p {
+  display: inline-block;
+  font-size: 20px;
+  
+}
+a {
+  text-decoration: none;
+}
+.main {
+  height: 100vh;
+  width: 100vw;
+}
