@@ -1,0 +1,12 @@
+body  {
+  margin: 0;
+  background-color: rgb(238, 237, 237);
+  font-family: Roboto, Arial;
+  overflow-x: hidden;
+}
+img {
+  height: 100%;
+}
+a {
+  text-decoration: none;
+}
