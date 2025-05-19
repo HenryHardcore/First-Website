@@ -1,0 +1,656 @@
+.pozadina {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+.naslov {
+  display: inline-block;
+  font-size: 4vw;
+  color: rgb(49, 24, 6);
+  transform: translateY(-42vw);
+}
+.naslov::after {
+  content:" ";
+  width: 7vw;
+  display: inline-block;
+  border: 1px solid rgb(49, 24, 6);
+  margin-bottom: 29px;
+  margin-left: 20px;
+}
+.naslov::before {
+  content:" ";
+  width: 7vw;
+  display: inline-block;
+  border: 1px solid rgb(49, 24, 6);
+  margin-bottom: 29px;
+  margin-right: 20px;
+}
+.papir {
+  border: 2px solid rgb(141, 141, 141);
+  width: 65vw;
+  transform: translateY(-34vw);
+  margin: 0px auto 0 auto;
+  background-color: rgb(250, 248, 248);
+  border-radius: 15px;
+  text-align: center;
+  justify-content: center;
+  height: 27vw;
+  position: absolute;
+}
+.kontejner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 0;
+}
+.paragraf1 {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  border-radius: 14px;
+  height: 100%;
+}
+.wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  animation: slide 70s linear infinite;
+  object-fit: contain;
+  border-radius: 15px;
+  cursor: pointer;
+}
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  47% {
+    transform: translateX(-4450px);
+  }
+  95% {
+    transform: translateX(-9060px); 
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.wrapper img{
+  width: 100%;
+}
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox-content {
+  max-width: 90%;
+  max-height: 80vh;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 80px;
+  cursor: pointer;
+}
+
+.nav {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 40px;
+}
+
+.prev, .next {
+  user-select: none;
+  color: white;
+  font-size: 80px;
+  cursor: pointer;
+}
+.ono-dole {
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  height: 160px;
+  margin-top: 20px;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.footer-nav {
+  margin: 0 auto;
+  width: 50%;
+  height: 48%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+ul {
+  list-style-type: none;
+}
+.item1 {
+  display: inline-block;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.item1:hover {
+  color: rgb(137,81,41);
+  font-size: 20px;
+  cursor: pointer;
+}
+.lista {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.copyrights {
+  display: block;
+  height: 48%;
+  width: 50%;
+  text-align: center;
+}
+.text-na-dnu {
+  font-size: 15px;
+}
+@media (max-width: 600px) {
+  .pozadina {
+    display: none;
+  }
+  .naslov {
+    display: inline-block;
+    font-size: 2rem;
+    color: rgb(49, 24, 6);
+    transform: translateY(10vh);
+  }
+  .naslov::after {
+    content:" ";
+    width: 9vw;
+    display: inline-block;
+    border: 1px solid rgb(49, 24, 6);
+    margin-bottom: 12px;
+    margin-left: 20px;
+  }
+  .naslov::before {
+    content:" ";
+    width: 9vw;
+    display: inline-block;
+    border: 1px solid rgb(49, 24, 6);
+    margin-bottom: 12px;
+    margin-right: 20px;
+  }
+  .papir {
+    border: 2px solid rgb(141, 141, 141);
+    width: 100%;
+    transform: translateY(20vh);
+    margin: 0px auto 0 auto;
+    background-color: rgb(250, 248, 248);
+    border-radius: 0px;
+    text-align: center;
+    justify-content: center;
+    height: 62vh;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .kontejner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 0;
+  }
+  .paragraf1 {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    position: absolute;
+    overflow: hidden;
+    width: 90vw;
+    border-radius: 0px;
+    height: 60vh;
+  }
+  .wrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    animation: slide 50s linear infinite;
+    object-fit: contain;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    47% {
+      transform: translateX(-2450px);
+    }
+    95% {
+      transform: translateX(-5060px); 
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  .wrapper img{
+    width: 100%;
+  }
+  .lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .lightbox-content {
+    max-width: 90%;
+    max-height: 80vh;
+  }
+
+  .close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 80px;
+    cursor: pointer;
+  }
+
+  .nav {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+  }
+
+  .prev, .next {
+    user-select: none;
+    color: white;
+    font-size: 80px;
+    cursor: pointer;
+  }
+  .ono-dole {
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 110px;
+    flex-direction: column;
+    align-items: center;
+    z-index: 3;
+  }
+  .footer-nav {
+    width: 100%;
+    height: 48%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .lista {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    height: 50%;
+    padding: 0;
+  }
+  .item1 {
+    display: inline-block;
+    font-weight: bold;
+    transition: 0.3s;
+    margin-bottom: 5px;
+  }
+  .item1:active {
+    color: rgb(137,81,41);
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .text-na-dnu {
+    font-size: 12px;
+  }
+  main {
+    height: 100vh;
+  }
+}
+@media (min-width: 601px) and (max-width: 768px) {
+  .naslov {
+    font-size: 70px;
+    width: 100%;
+  }
+  .naslov::after {
+  content:" ";
+  width: 100px;
+  display: inline-block;
+  border: 1px solid rgb(49, 24, 6);
+  margin-bottom: 29px;
+  margin-left: 20px;
+  }
+  .naslov::before {
+    content:" ";
+    width: 100px;
+    display: inline-block;
+    border: 1px solid rgb(49, 24, 6);
+    margin-bottom: 29px;
+    margin-right: 20px;
+  }
+
+  .papir {
+    width: 60vw;
+    transform: translateY(-80vw);
+    background-color: rgb(250, 248, 248);
+    border-radius: 0px;
+    height: 300px;
+    box-shadow: none;
+  }
+  .paragraf1 {
+    width: 100%;
+    font-size: 20px;
+  }
+  h2:after {
+    width: 10%;
+    margin-bottom: 10px;
+  
+  }
+  h2:before {
+    width: 10%;
+    margin-bottom: 10px;
+  }
+  .imejl {
+    margin: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+  }
+  .imejl p {
+    font-size: 30px;
+  }
+  .telefon {
+    text-align: center;
+    height: 100px;
+    width: 100%;
+  }
+  .telefon p {
+    font-size: 30px;
+    margin: 0;
+  }
+  .ono-dole {
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 110px;
+    flex-direction: column;
+    align-items: center;
+    z-index: 3;
+  }
+  .footer-nav {
+    width: 100%;
+    height: 48%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .lista {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    height: 50%;
+    padding: 0;
+  }
+  .item1 {
+    display: inline-block;
+    font-weight: bold;
+    transition: 0.3s;
+    margin-bottom: 5px;
+  }
+  .item1:active {
+    color: rgb(137,81,41);
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .text-na-dnu {
+    font-size: 12px;
+  }
+}
+@media (min-width: 769px) and (max-width: 991px) {
+  .naslov {
+    font-size: 70px;
+  }
+  .naslov::after {
+  content:" ";
+  width: 100px;
+  display: inline-block;
+  border: 1px solid rgb(49, 24, 6);
+  margin-bottom: 29px;
+  margin-left: 20px;
+  }
+  .naslov::before {
+    content:" ";
+    width: 100px;
+    display: inline-block;
+    border: 1px solid rgb(49, 24, 6);
+    margin-bottom: 29px;
+    margin-right: 20px;
+  }
+  .papir {
+    width: 70vw;
+    transform: translateY(-80vw);
+    background-color: rgb(250, 248, 248);
+    border-radius: 0px;
+    height: 300px;
+    box-shadow: none;
+  }
+  .paragraf1 {
+    width: 100%;
+    font-size: 20px;
+  }
+  h2:after {
+    width: 10%;
+    margin-bottom: 10px;
+  
+  }
+  h2:before {
+    width: 10%;
+    margin-bottom: 10px;
+  }
+  .imejl {
+    margin: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+  }
+  .imejl p {
+    font-size: 30px;
+  }
+  .telefon {
+    text-align: center;
+    height: 100px;
+    width: 100%;
+  }
+  .telefon p {
+    font-size: 30px;
+    margin: 0;
+  }
+  .ono-dole {
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 110px;
+    flex-direction: column;
+    align-items: center;
+    z-index: 3;
+  }
+  .footer-nav {
+    width: 100%;
+    height: 48%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .lista {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    height: 50%;
+    padding: 0;
+  }
+  .item1 {
+    display: inline-block;
+    font-weight: bold;
+    transition: 0.3s;
+    margin-bottom: 5px;
+  }
+  .item1:active {
+    color: rgb(137,81,41);
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .text-na-dnu {
+    font-size: 12px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .naslov {
+    font-size: 100px;
+    margin-top: 300px;
+  }
+  .naslov::after {
+  content:" ";
+  width: 100px;
+  display: inline-block;
+  border: 1px solid rgb(49, 24, 6);
+  margin-bottom: 29px;
+  margin-left: 20px;
+  }
+  .naslov::before {
+    content:" ";
+    width: 100px;
+    display: inline-block;
+    border: 1px solid rgb(49, 24, 6);
+    margin-bottom: 29px;
+    margin-right: 20px;
+  }
+
+  .papir {
+    width: 70vw;
+    transform: translateY(-80vw);
+    background-color: rgb(250, 248, 248);
+    border-radius: 0px;
+    height: 30vh;
+    box-shadow: none;
+  }
+  .paragraf1 {
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+  }
+  h2:after {
+    width: 10%;
+    margin-bottom: 10px;
+  }
+  h2:before {
+    width: 10%;
+    margin-bottom: 10px;
+  }
+  .imejl {
+    margin: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    
+  }
+  .imejl p {
+    display: block;
+    font-size: 2rem;
+  }
+  .telefon {
+    text-align: center;
+    height: 100px;
+    width: 100%;
+  }
+  .telefon p{
+    display: block;
+    width: 100%;
+    font-size: 2rem;
+    text-wrap: nowrap;
+    margin: 20px;
+  }
+  .ono-dole {
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 110px;
+    flex-direction: column;
+    align-items: center;
+    z-index: 3;
+  }
+  .footer-nav {
+    width: 100%;
+    height: 48%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .lista {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    height: 50%;
+    padding: 0;
+  }
+  .item1 {
+    display: inline-block;
+    font-weight: bold;
+    transition: 0.3s;
+    margin-bottom: 5px;
+  }
+  .item1:active {
+    color: rgb(137,81,41);
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .text-na-dnu {
+    font-size: 12px;
+  }
+}
